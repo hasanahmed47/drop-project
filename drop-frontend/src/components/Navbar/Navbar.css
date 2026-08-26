@@ -83,6 +83,12 @@
 }
 
 @media (max-width: 900px) {
+  .navbar__inner {
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .navbar__links,
   .navbar__cta {
     display: none;
