@@ -1,0 +1,34 @@
+.menu-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 140px 24px 80px;
+}
+
+.menu-page__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.menu-page__eyebrow {
+  display: block;
+  color: var(--color-caramel);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.menu-page__header h2 {
+  font-size: 2.4rem;
+  color: var(--color-espresso);
+}
+
+.menu-page__list {
+  margin-top: 8px;
+}
+
+.menu-page__empty {
+  text-align: center;
+  color: var(--color-muted);
+  margin-top: 60px;
+}

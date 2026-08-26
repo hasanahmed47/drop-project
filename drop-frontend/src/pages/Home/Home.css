@@ -1,0 +1,328 @@
+/* ═══════════════════════════════════════════════════════════
+   HOME PAGE — Complete Design System
+   Sections: CraftStory · CTABanner
+   (StatsCounter, CategoryGrid, Testimonials have their own files)
+═══════════════════════════════════════════════════════════ */
+
+/* ─── Craft Story ──────────────────────────────────────────── */
+.craft {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 640px;
+  background-color: var(--color-bg-dark);
+  overflow: hidden;
+}
+
+/* Left image column */
+.craft__img-col {
+  position: relative;
+  overflow: hidden;
+}
+
+.craft__img-track {
+  position: absolute;
+  inset: -12% 0;
+  will-change: transform;
+}
+
+.craft__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Floating stat card on top of image */
+.craft__float-card {
+  position: absolute;
+  bottom: 40px;
+  right: -24px;
+  background: rgba(198, 138, 75, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(198, 138, 75, 0.35);
+  border-radius: 16px;
+  padding: 20px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 2;
+}
+
+.craft__float-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-caramel);
+  line-height: 1;
+}
+
+.craft__float-label {
+  font-size: 0.78rem;
+  color: rgba(246, 241, 234, 0.7);
+  max-width: 140px;
+  line-height: 1.4;
+}
+
+/* Right content column */
+.craft__content {
+  padding: 80px 64px 80px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  will-change: transform;
+}
+
+.craft__eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--color-caramel);
+  margin-bottom: 18px;
+}
+
+.craft__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw, 2.9rem);
+  font-weight: 600;
+  color: var(--color-cream);
+  line-height: 1.18;
+  margin-bottom: 22px;
+}
+
+.craft__heading-em {
+  font-style: italic;
+  color: var(--color-caramel);
+}
+
+.craft__body {
+  font-size: 0.97rem;
+  color: rgba(246, 241, 234, 0.62);
+  line-height: 1.8;
+  margin-bottom: 28px;
+  max-width: 440px;
+}
+
+.craft__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.craft__list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: rgba(246, 241, 234, 0.8);
+  font-weight: 500;
+}
+
+.craft__list-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-caramel);
+  flex-shrink: 0;
+}
+
+.craft__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-caramel);
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(198, 138, 75, 0.3);
+  padding-bottom: 3px;
+  transition: gap 0.22s ease, color 0.22s ease, border-color 0.22s ease;
+  width: fit-content;
+}
+
+.craft__cta:hover {
+  gap: 14px;
+  color: #e8a85e;
+  border-color: rgba(198, 138, 75, 0.7);
+}
+
+/* Craft responsive */
+@media (max-width: 900px) {
+  .craft {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .craft__img-col {
+    position: relative;
+    height: 340px;
+  }
+
+  .craft__img-track {
+    position: absolute;
+    inset: 0;
+  }
+
+  .craft__float-card {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .craft__content {
+    padding: 52px 28px 60px;
+  }
+
+  .craft__body {
+    max-width: 100%;
+  }
+}
+
+/* ─── CTA Banner ───────────────────────────────────────────── */
+.cta-banner {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.cta-banner__bg {
+  position: absolute;
+  inset: -12% 0;
+  z-index: -1;
+  will-change: transform;
+}
+
+.cta-banner__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cta-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 11, 8, 0.88) 0%,
+    rgba(24, 20, 17, 0.78) 50%,
+    rgba(91, 58, 41, 0.55) 100%
+  );
+}
+
+.cta-banner__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 80px 32px;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.cta-banner__eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--color-caramel);
+  margin-bottom: 16px;
+}
+
+.cta-banner__heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 600;
+  color: var(--color-cream);
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.cta-banner__sub {
+  font-size: 1rem;
+  color: rgba(246, 241, 234, 0.68);
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 36px;
+}
+
+.cta-banner__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Primary filled button */
+.cta-banner__btn--primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-caramel);
+  color: var(--color-espresso);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 14px 30px;
+  border-radius: 999px;
+  letter-spacing: 0.01em;
+  transition: background-color 0.22s ease, transform 0.22s ease, gap 0.2s ease;
+}
+
+.cta-banner__btn--primary:hover {
+  background-color: #d99a5a;
+  transform: translateY(-2px);
+  gap: 13px;
+}
+
+/* Ghost outline button */
+.cta-banner__btn--ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 13px 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(246, 241, 234, 0.3);
+  letter-spacing: 0.01em;
+  transition: border-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
+}
+
+.cta-banner__btn--ghost:hover {
+  border-color: rgba(198, 138, 75, 0.6);
+  color: var(--color-caramel);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .cta-banner {
+    min-height: 480px;
+  }
+
+  .cta-banner__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-banner__btn--primary,
+  .cta-banner__btn--ghost {
+    width: 100%;
+    justify-content: center;
+  }
+}

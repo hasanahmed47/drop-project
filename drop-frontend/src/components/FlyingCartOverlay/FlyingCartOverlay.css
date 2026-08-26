@@ -1,0 +1,14 @@
+.flying-cart-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.flying-cart-overlay__icon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: var(--color-caramel);
+  filter: drop-shadow(0 4px 10px rgba(198, 138, 75, 0.5));
+}

@@ -1,0 +1,75 @@
+.order-tracking {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 140px 32px 80px;
+}
+
+.order-tracking h2 {
+  font-size: 2rem;
+  color: var(--color-espresso);
+}
+
+.order-tracking__subtitle {
+  color: var(--color-muted);
+  margin-bottom: 40px;
+}
+
+.order-tracking__timeline {
+  position: relative;
+  display: flex;
+  gap: 24px;
+}
+
+.order-tracking__line {
+  position: relative;
+  width: 3px;
+  background-color: var(--color-border);
+  border-radius: 2px;
+}
+
+.order-tracking__line-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-caramel);
+  border-radius: 2px;
+}
+
+.order-tracking__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  flex: 1;
+}
+
+.order-tracking__step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.order-tracking__label {
+  color: var(--color-espresso);
+  font-weight: 500;
+}
+
+.order-tracking__step--active .order-tracking__icon {
+  display: inline-flex;
+  border-radius: 50%;
+  animation: breathe 1.6s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(198, 138, 75, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(198, 138, 75, 0);
+  }
+}
+
+.order-tracking__step--pending .order-tracking__label {
+  color: var(--color-muted);
+}
