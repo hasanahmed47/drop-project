@@ -1,7 +1,7 @@
 # DROP: Specialty Coffee App
 
 
-`drop-frontend/` — React 19 + Redux Toolkit + MUI + Framer Motion (Vite)
+`drop-frontend/`  React 19 + Redux Toolkit + MUI + Framer Motion (Vite)
 `drop-backend/` — Node + Express + MongoDB + JWT + Socket.io (Socket.io wired but Orders currently polls every 30s, matching the reference app's "Live updates every 30s" pattern)
 
 ## Quick start
