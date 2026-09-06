@@ -1,4 +1,4 @@
-# DROP — Specialty Coffee App
+# DROP: Specialty Coffee App
 
 
 `drop-frontend/` — React 19 + Redux Toolkit + MUI + Framer Motion (Vite)
